@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>游戏商城</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+
+<body>
+    <div class="w">
+        <div class="nav">
+            <a href="/">欢迎页</a>
+            <a href="/all">全部游戏</a>
+            <a href="/science">坤坤专题</a>
+            <a href="/history">贺卡专题</a>
+            <a href="/geography">经典游戏</a>
+        </div>
+
+
+        <div>
+            <h1>游戏购物商城</h1>
+        <h2>{{t_desc}}</h2>
+        </div>
+
+        <div class="container">
+            {% for i in t_data %}
+            <div class="block">
+                <h3>《{{ i['book'] }}》</h3>
+                <p>出版：{{ i['author'] }}</p>
+                <p>售价：{{ i['price'] }}</p>
+                <p>简介：{{ i['publish'] }}</p>
+                <br>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</body>
+
+</html>
